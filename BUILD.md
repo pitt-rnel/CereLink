@@ -47,11 +47,11 @@ Here are some cmake one-liners that work if your development environment happens
     * `cmake -B build -S . -DCMAKE_INSTALL_PREFIX=${PWD}/install -DCPACK_PACKAGE_DIRECTORY=${PWD}/dist`
 
 Then follow that up with (append a processor # after the -j to use more cores):
-* `cmake --build build --config Release -j`
-* `cmake --build build --target=install --config Release -j`
+* `cmake --build build --config Release -j 10`
+* `cmake --build build --target=install --config Release -j 10`
 
 And optionally, to build zips or debs:
-* `cmake --build build --target package --config Release -j`
+* `cmake --build build --target package --config Release -j 10`
 
 The build products should appear in the CereLink/install or CereLink/build/install directory.
 
