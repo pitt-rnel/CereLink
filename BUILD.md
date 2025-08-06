@@ -36,6 +36,10 @@ Here are some cmake one-liners that work if your development environment happens
 
 * Windows:
     * `cmake -B build -S . -G "Visual Studio 16 2019" -DCMAKE_PREFIX_PATH=C:\Qt\6.5.2\msvc2019_64 -DBUILD_STATIC=ON -DCMAKE_INSTALL_PREFIX=../install -DCPACK_PACKAGE_DIRECTORY=../dist`
+    JEFF'S SPECIAL VERSION THAT WORKS:
+    * `cmake -B build -S . -G "Visual Studio 17 2022" -DCMAKE_PREFIX_PATH=C:\Qt\6.9.1\msvc2022_64 -DBUILD_STATIC=ON -DCMAKE_INSTALL_PREFIX=./install -DCPACK_PACKAGE_DIRECTORY=./dist`
+
+
 * MacOS
     * `cmake -B build -S . -DQt6_DIR=$(brew --prefix qt6)/lib/cmake/Qt6 -DCMAKE_INSTALL_PREFIX=${PWD}/install -DCPACK_PACKAGE_DIRECTORY=${PWD}/dist`
     * If you are going to use the Xcode generator then you also need to use the old build system. Append: `-G Xcode -T buildsystem=1`
@@ -90,7 +94,7 @@ Note: This may generate an error related to the CLI builds. Please see further i
 * Change to the CereLink directory.
 * If you haven't already, build CereLink following the above instructions.
 * Set the QTDIR environment variable:
-  * Windows: `set QTDIR=C:\Qt\6.5.2\msvc2019_64`
+  * Windows: `set QTDIR=C:\Qt\6.9.1\msvc2022_64`
   * Mac: `set QTDIR==$(brew --prefix qt6)`
 * Windows: Close Visual Studio.
 * Windows: Copy required Qt dlls into the cerebus tree so they get bundled in the wheel:
